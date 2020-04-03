@@ -1,0 +1,29 @@
+{
+    "name": "altairAki/Pay",
+
+    "type": "pay-extension",
+
+    "description": "Focus on Alipay and wechat's payment expansion package",
+    "keywords": ["alipay", "wechat", "pay"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/AltairAki/pay/issues",
+        "source": "https://github.com/AltairAki/pay"
+    },
+    "authors": [
+        {
+            "name": "AltairAki",
+            "email": "altaiirr.wl@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "symfony/http-foundation": "^4.0 || ^5.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "altairAki\\pay\\": "src/"
+        }
+    }
+}
