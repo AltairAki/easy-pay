@@ -1,9 +1,9 @@
 {
-    "name": "altairaki/pay",
+    "name": "altair/pay",
 
-    "type": "pay-extension",
+    "type": "php-aggregate-payment",
 
-    "description": "Focus on Alipay and wechat's payment expansion package",
+    "description": "Focus on Alipay and wechat's aggregate payment package",
     "keywords": ["alipay", "wechat", "pay"],
     "license": "MIT",
     "support": {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "altairaki\\pay\\": "src/"
+            "altair\\pay\\": "src/"
         }
     }
 }
