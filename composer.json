@@ -1,5 +1,5 @@
 {
-    "name": "altairAki/Pay",
+    "name": "altairaki/Pay",
 
     "type": "pay-extension",
 
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "altairAki\\pay\\": "src/"
+            "altairaki\\pay\\": "src/"
         }
     }
 }
