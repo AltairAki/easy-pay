@@ -6,18 +6,18 @@
  * Time: 11:37
  */
 
-namespace altairAki\Pay\Gateways;
+namespace AltairAki\Pay\Gateways;
 
 
-use altairAki\Pay\Contracts\GatewayApplicationInterface;
-use altairAki\Pay\Contracts\GatewayInterface;
-use altairAki\Pay\Exceptions\Exception;
-use altairAki\Pay\Exceptions\InvalidArgumentException;
-use altairAki\Pay\Exceptions\InvalidGatewayException;
-use altairAki\Pay\Gateways\Wechat\Support;
-use altairAki\Pay\Supports\Collection;
-use altairAki\Pay\Supports\Config;
-use altairAki\Pay\Supports\Str;
+use AltairAki\Pay\Contracts\GatewayApplicationInterface;
+use AltairAki\Pay\Contracts\GatewayInterface;
+use AltairAki\Pay\Exceptions\Exception;
+use AltairAki\Pay\Exceptions\InvalidArgumentException;
+use AltairAki\Pay\Exceptions\InvalidGatewayException;
+use AltairAki\Pay\Gateways\Wechat\Support;
+use AltairAki\Pay\Supports\Collection;
+use AltairAki\Pay\Supports\Config;
+use AltairAki\Pay\Supports\Str;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 

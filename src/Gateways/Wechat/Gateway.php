@@ -6,12 +6,12 @@
  * Time: 16:03
  */
 
-namespace altairAki\Pay\Gateways\Wechat;
+namespace AltairAki\Pay\Gateways\Wechat;
 
 
-use altairAki\Pay\Contracts\GatewayInterface;
-use altairAki\Pay\Exceptions\InvalidArgumentException;
-use altairAki\Pay\Supports\Collection;
+use AltairAki\Pay\Contracts\GatewayInterface;
+use AltairAki\Pay\Exceptions\InvalidArgumentException;
+use AltairAki\Pay\Supports\Collection;
 
 abstract class Gateway implements GatewayInterface
 {
@@ -41,8 +41,8 @@ abstract class Gateway implements GatewayInterface
      * @param $payload
      * @return Collection
      * @throws InvalidArgumentException
-     * @throws \altairAki\Pay\Exceptions\GatewayException
-     * @throws \altairAki\Pay\Exceptions\InvalidSignException
+     * @throws \AltairAki\Pay\Exceptions\GatewayException
+     * @throws \AltairAki\Pay\Exceptions\InvalidSignException
      */
     protected function preOrder($payload): Collection
     {

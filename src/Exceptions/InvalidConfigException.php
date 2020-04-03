@@ -1,6 +1,6 @@
 <?php
 
-namespace altairAki\Pay\Exceptions;
+namespace AltairAki\Pay\Exceptions;
 
 class InvalidConfigException extends Exception
 {

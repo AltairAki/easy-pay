@@ -6,7 +6,7 @@
  * Time: 15:02
  */
 
-namespace altairAki\Pay\Exceptions;
+namespace AltairAki\Pay\Exceptions;
 
 
 class InvalidArgumentException extends Exception

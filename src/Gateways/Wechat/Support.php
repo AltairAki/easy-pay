@@ -6,19 +6,19 @@
  * Time: 14:22
  */
 
-namespace altairAki\Pay\Gateways\Wechat;
+namespace AltairAki\Pay\Gateways\Wechat;
 
 
-use altairAki\Pay\Exceptions\BusinessException;
-use altairAki\Pay\Exceptions\Exception;
-use altairAki\Pay\Exceptions\GatewayException;
-use altairAki\Pay\Exceptions\InvalidArgumentException;
-use altairAki\Pay\Exceptions\InvalidSignException;
-use altairAki\Pay\Gateways\Wechat;
-use altairAki\Pay\Supports\Collection;
-use altairAki\Pay\Supports\Config;
-use altairAki\Pay\Supports\Str;
-use altairAki\Pay\Supports\Traits\HasHttpRequest;
+use AltairAki\Pay\Exceptions\BusinessException;
+use AltairAki\Pay\Exceptions\Exception;
+use AltairAki\Pay\Exceptions\GatewayException;
+use AltairAki\Pay\Exceptions\InvalidArgumentException;
+use AltairAki\Pay\Exceptions\InvalidSignException;
+use AltairAki\Pay\Gateways\Wechat;
+use AltairAki\Pay\Supports\Collection;
+use AltairAki\Pay\Supports\Config;
+use AltairAki\Pay\Supports\Str;
+use AltairAki\Pay\Supports\Traits\HasHttpRequest;
 
 class Support
 {

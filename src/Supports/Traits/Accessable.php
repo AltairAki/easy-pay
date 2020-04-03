@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace altairAki\Pay\Supports\Traits;
+namespace AltairAki\Pay\Supports\Traits;
 
 trait Accessable
 {

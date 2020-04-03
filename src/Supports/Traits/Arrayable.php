@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace altairAki\Pay\Supports\Traits;
+namespace AltairAki\Pay\Supports\Traits;
 
 use ReflectionClass;
-use altairAki\Pay\Supports\Str;
+use AltairAki\Pay\Supports\Str;
 
 trait Arrayable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace altairAki\Pay\Supports\Traits;
+namespace AltairAki\Pay\Supports\Traits;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;

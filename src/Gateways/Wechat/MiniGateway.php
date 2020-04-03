@@ -6,11 +6,11 @@
  * Time: 14:06
  */
 
-namespace altairAki\Pay\Gateways\Wechat;
+namespace AltairAki\Pay\Gateways\Wechat;
 
 
-use altairAki\Pay\Supports\Collection;
-use altairAki\Pay\Supports\Str;
+use AltairAki\Pay\Supports\Collection;
+use AltairAki\Pay\Supports\Str;
 
 class MiniGateway extends Gateway
 {
@@ -23,9 +23,9 @@ class MiniGateway extends Gateway
      * @param $baseUri
      * @param array $payload
      * @return Collection|\Symfony\Component\HttpFoundation\Response
-     * @throws \altairAki\Pay\Exceptions\GatewayException
-     * @throws \altairAki\Pay\Exceptions\InvalidArgumentException
-     * @throws \altairAki\Pay\Exceptions\InvalidSignException
+     * @throws \AltairAki\Pay\Exceptions\GatewayException
+     * @throws \AltairAki\Pay\Exceptions\InvalidArgumentException
+     * @throws \AltairAki\Pay\Exceptions\InvalidSignException
      */
     public function pay($baseUri, array $payload)
     {

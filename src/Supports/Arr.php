@@ -1,6 +1,6 @@
 <?php
 
-namespace altairAki\Pay\Supports;
+namespace AltairAki\Pay\Supports;
 
 use Closure;
 
