@@ -1,5 +1,5 @@
 {
-    "name": "altair/pay",
+    "name": "altairaki/pay",
 
     "type": "php-aggregate-payment",
 
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "altair\\pay\\": "src/"
+            "altairaki\\pay\\": "src/"
         }
     }
 }
