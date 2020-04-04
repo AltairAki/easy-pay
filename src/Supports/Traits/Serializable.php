@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AltairAki\Pay\Supports\Traits;
+namespace altairaki\pay\Supports\Traits;
 
 use RuntimeException;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace AltairAki\Pay\Supports;
+namespace altairaki\pay\Supports;
 
 use Exception;
 

@@ -6,14 +6,14 @@
  * Time: 11:19
  */
 
-namespace AltairAki\Pay;
+namespace altairaki\pay;
 
 
-use AltairAki\Pay\Contracts\GatewayApplicationInterface;
-use AltairAki\Pay\Exceptions\Exception;
-use AltairAki\Pay\Exceptions\InvalidGatewayException;
-use AltairAki\Pay\Supports\Config;
-use AltairAki\Pay\Supports\Str;
+use altairaki\pay\Contracts\GatewayApplicationInterface;
+use altairaki\pay\Exceptions\Exception;
+use altairaki\pay\Exceptions\InvalidGatewayException;
+use altairaki\pay\Supports\Config;
+use altairaki\pay\Supports\Str;
 
 class Pay
 {

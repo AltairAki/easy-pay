@@ -6,7 +6,7 @@
  * Time: 12:10
  */
 
-namespace AltairAki\Pay\Exceptions;
+namespace altairaki\pay\Exceptions;
 
 
 use Throwable;
