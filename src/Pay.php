@@ -6,15 +6,19 @@
  * Time: 11:19
  */
 
-namespace altairaki\pay;
+namespace AltairAki\Pay;
 
 
-use altairaki\pay\Contracts\GatewayApplicationInterface;
-use altairaki\pay\Exceptions\Exception;
-use altairaki\pay\Exceptions\InvalidGatewayException;
-use altairaki\pay\Supports\Config;
-use altairaki\pay\Supports\Str;
+use AltairAki\Pay\Contracts\GatewayApplicationInterface;
+use AltairAki\Pay\Exceptions\Exception;
+use AltairAki\Pay\Exceptions\InvalidGatewayException;
+use AltairAki\Pay\Gateways\Wechat;
+use AltairAki\Pay\Supports\Config;
+use AltairAki\Pay\Supports\Str;
 
+/**
+ * @method static Wechat wechat(array $config) 微信
+ */
 class Pay
 {
     /**

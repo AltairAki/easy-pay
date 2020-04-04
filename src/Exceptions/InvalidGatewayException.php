@@ -6,7 +6,7 @@
  * Time: 12:09
  */
 
-namespace altairaki\pay\Exceptions;
+namespace AltairAki\Pay\Exceptions;
 
 
 class InvalidGatewayException extends Exception

@@ -1,6 +1,6 @@
 <?php
 
-namespace altairaki\pay\Exceptions;
+namespace AltairAki\Pay\Exceptions;
 
 class BusinessException extends GatewayException
 {

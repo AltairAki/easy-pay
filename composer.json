@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "altairaki\\pay\\": "src/"
+            "AltairAki\\Pay\\": "src/"
         }
     }
 }

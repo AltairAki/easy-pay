@@ -1,6 +1,6 @@
 <?php
 
-namespace altairaki\pay\Supports;
+namespace AltairAki\Pay\Supports;
 
 class Config extends Collection
 {

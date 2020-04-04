@@ -6,10 +6,10 @@
  * Time: 14:11
  */
 
-namespace altairaki\pay\Contracts;
+namespace AltairAki\Pay\Contracts;
 
 
-use altairaki\pay\Supports\Collection;
+use AltairAki\Pay\Supports\Collection;
 use Symfony\Component\HttpFoundation\Response;
 
 interface GatewayInterface
