@@ -8,7 +8,6 @@
 
 namespace AltairAki\EasyPay\Gateways\Wechat;
 
-
 use AltairAki\EasyPay\Exceptions\BusinessException;
 use AltairAki\EasyPay\Exceptions\Exception;
 use AltairAki\EasyPay\Exceptions\GatewayException;
@@ -160,7 +159,7 @@ class Support
         if (Wechat::MODE_SERVICE === self::$instance->getConfig('mode', Wechat::MODE_NORMAL)) {
             $payload['sub_appid'] = self::$instance->getConfig('sub_' . $type, '');
         }
-        
+
         unset($payload['trade_type'], $payload['type']);
         if (!$preserve_notify_url) {
             unset($payload['notify_url']);
