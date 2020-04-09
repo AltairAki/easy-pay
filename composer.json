@@ -1,14 +1,12 @@
 {
-    "name": "altairaki/pay",
-
-    "type": "php-aggregate-payment",
-
-    "description": "Focus on Alipay and wechat's aggregate payment package",
+    "name": "altairaki/easy-pay",
+    "type": "php-easy-payment",
+    "description": "Focus on Alipay and wechat's easy payment package",
     "keywords": ["alipay", "wechat", "pay"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/AltairAki/pay/issues",
-        "source": "https://github.com/AltairAki/pay"
+        "issues": "https://github.com/AltairAki/easy-pay/issues",
+        "source": "https://github.com/AltairAki/easy-pay"
     },
     "authors": [
         {
@@ -23,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AltairAki\\Pay\\": "src/"
+            "AltairAki\\EasyPay\\": "src/"
         }
     }
 }

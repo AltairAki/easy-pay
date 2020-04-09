@@ -6,21 +6,20 @@
  * Time: 11:43
  */
 
-namespace AltairAki\Pay\Contracts;
+namespace AltairAki\EasyPay\Contracts;
 
 
-use AltairAki\Pay\Supports\Collection;
+use AltairAki\EasyPay\Supports\Collection;
 use Symfony\Component\HttpFoundation\Response;
 
 interface GatewayApplicationInterface
 {
     /**
      * To pay.
-     * @param $gateway
      * @param $params
      * @return Collection|Response
      */
-    public function pay($gateway, $params);
+    public function pay($params);
 
     /**
      * Echo success to server.

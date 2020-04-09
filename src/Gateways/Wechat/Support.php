@@ -6,19 +6,19 @@
  * Time: 14:22
  */
 
-namespace AltairAki\Pay\Gateways\Wechat;
+namespace AltairAki\EasyPay\Gateways\Wechat;
 
 
-use AltairAki\Pay\Exceptions\BusinessException;
-use AltairAki\Pay\Exceptions\Exception;
-use AltairAki\Pay\Exceptions\GatewayException;
-use AltairAki\Pay\Exceptions\InvalidArgumentException;
-use AltairAki\Pay\Exceptions\InvalidSignException;
-use AltairAki\Pay\Gateways\Wechat;
-use AltairAki\Pay\Supports\Collection;
-use AltairAki\Pay\Supports\Config;
-use AltairAki\Pay\Supports\Str;
-use AltairAki\Pay\Supports\Traits\HasHttpRequest;
+use AltairAki\EasyPay\Exceptions\BusinessException;
+use AltairAki\EasyPay\Exceptions\Exception;
+use AltairAki\EasyPay\Exceptions\GatewayException;
+use AltairAki\EasyPay\Exceptions\InvalidArgumentException;
+use AltairAki\EasyPay\Exceptions\InvalidSignException;
+use AltairAki\EasyPay\Gateways\Wechat;
+use AltairAki\EasyPay\Supports\Collection;
+use AltairAki\EasyPay\Supports\Config;
+use AltairAki\EasyPay\Supports\Str;
+use AltairAki\EasyPay\Supports\Traits\HasHttpRequest;
 
 class Support
 {
@@ -62,7 +62,6 @@ class Support
      * @param $key
      *
      * @return mixed|Config|null
-
      *
      */
     public function __get($key)
@@ -92,7 +91,6 @@ class Support
      * @return Support
      * @throws InvalidArgumentException
      *
-
      *
      */
     public static function getInstance()
@@ -152,8 +150,7 @@ class Support
      */
     public static function filterpayload($payload, $params, $preserve_notify_url = false): array
     {
-        $type = self::getTypeName($params['type'] ?? '');
-
+        $type = self::getTypeName($payload['type'] ?? '');
         $payload = array_merge(
             $payload,
             is_array($params) ? $params : ['out_trade_no' => $params]
@@ -163,7 +160,7 @@ class Support
         if (Wechat::MODE_SERVICE === self::$instance->getConfig('mode', Wechat::MODE_NORMAL)) {
             $payload['sub_appid'] = self::$instance->getConfig('sub_' . $type, '');
         }
-
+        
         unset($payload['trade_type'], $payload['type']);
         if (!$preserve_notify_url) {
             unset($payload['notify_url']);
@@ -255,7 +252,6 @@ class Support
      * @param string $xml
      *
      * @throws InvalidArgumentException
-
      *
      */
     public static function fromXml($xml): array
@@ -276,7 +272,6 @@ class Support
      * @param mixed|null $default
      *
      * @return mixed|null
-
      *
      */
     public function getConfig($key = null, $default = null)
@@ -296,13 +291,13 @@ class Support
      * Get app id according to param type.
      *
      * @param string $type
-
-     *
      */
     public static function getTypeName($type = ''): string
     {
         switch ($type) {
             case '':
+                $type = 'app_id';
+            case 'oa':
                 $type = 'app_id';
                 break;
             case 'app':
@@ -311,7 +306,6 @@ class Support
             default:
                 $type = $type . '_id';
         }
-
         return $type;
     }
 
@@ -319,7 +313,6 @@ class Support
      * Get Base Uri.
      *
      * @return string
-
      *
      */
     public function getBaseUri()

@@ -6,15 +6,15 @@
  * Time: 11:19
  */
 
-namespace AltairAki\Pay;
+namespace AltairAki\EasyPay;
 
 
-use AltairAki\Pay\Contracts\GatewayApplicationInterface;
-use AltairAki\Pay\Exceptions\Exception;
-use AltairAki\Pay\Exceptions\InvalidGatewayException;
-use AltairAki\Pay\Gateways\Wechat;
-use AltairAki\Pay\Supports\Config;
-use AltairAki\Pay\Supports\Str;
+use AltairAki\EasyPay\Contracts\GatewayApplicationInterface;
+use AltairAki\EasyPay\Exceptions\Exception;
+use AltairAki\EasyPay\Exceptions\InvalidGatewayException;
+use AltairAki\EasyPay\Gateways\Wechat;
+use AltairAki\EasyPay\Supports\Config;
+use AltairAki\EasyPay\Supports\Str;
 
 /**
  * @method static Wechat wechat(array $config) 微信
@@ -40,7 +40,6 @@ class Pay
 
     /**
      * Magic static call.
-     *
      *
      * @param string $method
      * @param array $params
@@ -68,7 +67,6 @@ class Pay
         if (class_exists($gateway)) {
             return self::make($gateway);
         }
-
         throw new InvalidGatewayException("Gateway [{$method}] Not Exists");
     }
 
@@ -78,8 +76,6 @@ class Pay
      * @param string $gateway
      *
      * @throws InvalidGatewayException
-     * @author altair <me@yansonga.cn>
-     *
      */
     protected function make($gateway): GatewayApplicationInterface
     {
@@ -91,33 +87,4 @@ class Pay
 
         throw new InvalidGatewayException("Gateway [{$gateway}] Must Be An Instance Of GatewayApplicationInterface");
     }
-
-    /**
-     * Register log service.
-     *
-     *
-     * @throws Exception
-     */
-//    protected function registerLogService()
-//    {
-//        $config = $this->config->get('log');
-//        $config['identify'] = 'altair.pay';
-//
-//        $logger = new Logger();
-//        $logger->setConfig($config);
-//
-//        Log::setInstance($logger);
-//    }
-//
-//    /**
-//     * Register event service.
-//     *
-//
-//     */
-//    protected function registerEventService()
-//    {
-//        Events::setDispatcher(Events::createDispatcher());
-//
-//        Events::addSubscriber(new KernelLogSubscriber());
-//    }
 }

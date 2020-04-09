@@ -1,6 +1,6 @@
 <?php
 
-namespace AltairAki\Pay\Supports;
+namespace AltairAki\EasyPay\Supports;
 
 class Config extends Collection
 {

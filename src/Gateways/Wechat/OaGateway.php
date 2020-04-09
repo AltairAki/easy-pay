@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm
  * Author: Altair
- * Date: 2020/4/2
- * Time: 14:06
+ * Date: 2020/4/8
+ * Time: 15:51
  */
 
 namespace AltairAki\EasyPay\Gateways\Wechat;
@@ -12,16 +12,11 @@ namespace AltairAki\EasyPay\Gateways\Wechat;
 use AltairAki\EasyPay\Supports\Collection;
 use AltairAki\EasyPay\Supports\Str;
 
-class MiniGateway extends Gateway
+class OaGateway extends Gateway
 {
-    /**
-     * @var bool
-     */
-    protected $payRequestUseSubAppId = false;
 
     /**
-     * 小程序生成预支付订单
-     *
+     * 生成公众号预支付订单
      * @param array $payload
      * @return Collection|\Symfony\Component\HttpFoundation\Response
      * @throws \AltairAki\EasyPay\Exceptions\GatewayException
@@ -30,7 +25,7 @@ class MiniGateway extends Gateway
      */
     public function pay(array $payload)
     {
-        $payload['appid'] = Support::getInstance()->mini_id;
+        $payload['appid'] = Support::getInstance()->app_id;
         $payload['trade_type'] = $this->getTradeType();
 
         $pay_request = [

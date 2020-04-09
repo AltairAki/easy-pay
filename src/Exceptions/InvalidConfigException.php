@@ -1,6 +1,6 @@
 <?php
 
-namespace AltairAki\Pay\Exceptions;
+namespace AltairAki\EasyPay\Exceptions;
 
 class InvalidConfigException extends Exception
 {

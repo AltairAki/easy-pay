@@ -1,36 +1,28 @@
 <?php
-/**
- * Created by PhpStorm
- * Author: Altair
- * Date: 2020/4/2
- * Time: 14:06
- */
 
 namespace AltairAki\EasyPay\Gateways\Wechat;
 
-
+use AltairAki\EasyPay\Exceptions\GatewayException;
+use AltairAki\EasyPay\Exceptions\InvalidArgumentException;
+use AltairAki\EasyPay\Exceptions\InvalidSignException;
 use AltairAki\EasyPay\Supports\Collection;
 use AltairAki\EasyPay\Supports\Str;
+use Symfony\Component\HttpFoundation\Request;
 
-class MiniGateway extends Gateway
+class ScanGateway extends Gateway
 {
     /**
-     * @var bool
-     */
-    protected $payRequestUseSubAppId = false;
-
-    /**
-     * 小程序生成预支付订单
+     * Pay an order.
      *
      * @param array $payload
-     * @return Collection|\Symfony\Component\HttpFoundation\Response
-     * @throws \AltairAki\EasyPay\Exceptions\GatewayException
-     * @throws \AltairAki\EasyPay\Exceptions\InvalidArgumentException
-     * @throws \AltairAki\EasyPay\Exceptions\InvalidSignException
+     *
+     * @throws GatewayException
+     * @throws InvalidArgumentException
+     * @throws InvalidSignException
      */
-    public function pay(array $payload)
+    public function pay(array $payload): Collection
     {
-        $payload['appid'] = Support::getInstance()->mini_id;
+        $payload['spbill_create_ip'] = Request::createFromGlobals()->server->get('SERVER_ADDR');
         $payload['trade_type'] = $this->getTradeType();
 
         $pay_request = [
@@ -43,5 +35,13 @@ class MiniGateway extends Gateway
         $pay_request['paySign'] = Support::generateSign($pay_request);
 
         return new Collection($pay_request);
+    }
+
+    /**
+     * Get trade type config.
+     */
+    protected function getTradeType(): string
+    {
+        return 'NATIVE';
     }
 }

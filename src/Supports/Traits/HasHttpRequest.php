@@ -1,6 +1,6 @@
 <?php
 
-namespace AltairAki\Pay\Supports\Traits;
+namespace AltairAki\EasyPay\Supports\Traits;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;

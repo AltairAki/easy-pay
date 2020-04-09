@@ -1,6 +1,6 @@
 <?php
 
-namespace AltairAki\Pay\Supports;
+namespace AltairAki\EasyPay\Supports;
 
 use ArrayAccess;
 use ArrayIterator;
@@ -210,7 +210,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, Serializa
      *
      * @return mixed
      */
-    public function get($key = null, $default = null)
+    public function get($key = null, $default = '')
     {
         return Arr::get($this->items, $key, $default);
     }

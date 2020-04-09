@@ -6,10 +6,10 @@
  * Time: 14:11
  */
 
-namespace AltairAki\Pay\Contracts;
+namespace AltairAki\EasyPay\Contracts;
 
 
-use AltairAki\Pay\Supports\Collection;
+use AltairAki\EasyPay\Supports\Collection;
 use Symfony\Component\HttpFoundation\Response;
 
 interface GatewayInterface
@@ -17,9 +17,8 @@ interface GatewayInterface
     /**
      * pay a order
      *
-     * @param $baseUri
      * @param $payload
      * @return Collection|Response
      */
-    public function pay($baseUri, array $payload);
+    public function pay(array $payload);
 }
