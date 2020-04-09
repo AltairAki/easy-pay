@@ -81,8 +81,8 @@ Pay::wechat($config)->app([
         'mini_id'    => 'wx0cb12db05346eb50', // 小程序 APPID
         'mch_id'        => '1222040111',
         'key'           => 'your key', //商户平台设置的密钥key
-        'cert_client'   => './cert/apiclient_cert.pem', // optional，退款等情况时用到
-        'cert_key'      => './cert/apiclient_key.pem',// optional，退款等情况时用到
+        'cert_client'   => 'xxx/apiclient_cert.pem', // optional，退款等情况时用到
+        'cert_key'      => 'xxx/apiclient_key.pem',// optional，退款等情况时用到
     ],
 ```
 由于使用多网关支付，查询订单|退款|等需要指定gateway
