@@ -12,12 +12,14 @@ namespace AltairAki\EasyPay;
 use AltairAki\EasyPay\Contracts\GatewayApplicationInterface;
 use AltairAki\EasyPay\Exceptions\Exception;
 use AltairAki\EasyPay\Exceptions\InvalidGatewayException;
+use AltairAki\EasyPay\Gateways\Alipay;
 use AltairAki\EasyPay\Gateways\Wechat;
 use AltairAki\EasyPay\Supports\Config;
 use AltairAki\EasyPay\Supports\Str;
 
 /**
  * @method static Wechat wechat(array $config) 微信
+ * @method static Alipay alipay(array $config) 支付宝
  */
 class Pay
 {

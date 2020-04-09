@@ -145,13 +145,13 @@ class Wechat implements GatewayApplicationInterface
         $this->payload = array_merge($this->payload, $params);
         $gateway = get_class($this) . '\\' . Str::studly($gateway) . 'Gateway';
         if (class_exists($gateway)) {
-            return $this->makepay($gateway);
+            return $this->makePayGateway($gateway);
         }
         throw new InvalidGatewayException("pay Gateway [{$gateway}] Not Exists");
     }
 
     /**
-     * 生成对应支付网关
+     * Make pay gateway.
      *
      * @param string $gateway
      *
@@ -159,7 +159,7 @@ class Wechat implements GatewayApplicationInterface
      * @throws InvalidGatewayException
      *
      */
-    protected function makepay($gateway)
+    protected function makePayGateway($gateway)
     {
         $app = new $gateway();
         if ($app instanceof GatewayInterface) {
