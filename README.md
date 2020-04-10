@@ -185,6 +185,8 @@ class PayController{
 
 ### [微信支付](https://pay.weixin.qq.com/wiki/doc/api/index.html)
 
+
+
 ```php
     'wecaht' => [
         'appid'         => 'wxc9d7aa3c5f3c5123', // APP APPID
@@ -196,7 +198,7 @@ class PayController{
         'cert_key'      => './cert/apiclient_key.pem',// optional，退款等情况时用到
     ],
 ```
-由于使用多网关支付，查询订单|退款|等需要指定gateway
+由于使用多网关支付，且微信APP，公众号，小程序都有自己的appid，因此在 查询订单|退款|等操作时需要指定gateway
 ```php
     'wecaht' => [
         ...
