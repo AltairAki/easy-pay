@@ -1,6 +1,6 @@
 <h1 align="center">Easy Pay</h1>
 
-<p align="center">一款满足你的多种支付方式的组件</p>
+<p align="center">一款满足多种支付方式的组件</p>
 
 ## 特点
 
